@@ -5,3 +5,11 @@
 -> Comunicado por Alba.
 
 - - - - - - - - - - - - - - - - - - - -
+
+>> VERSION 2:
+
+-> Generado por Alba.
+-> Verificado por Marc.
+-> Comunicado por Eloi.
+
+- - - - - - - - - - - - - - - - - - - -

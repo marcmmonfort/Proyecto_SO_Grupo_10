@@ -14,6 +14,9 @@ namespace WindowsFormsApplication1
     public partial class cliente_Form : Form
     {
         Socket server;
+        bool Loged = false;
+        bool Connect = false;
+        bool Conect_Click = false;
         public cliente_Form()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@ namespace WindowsFormsApplication1
         private void Conectar_Click(object sender, EventArgs e)
         {
             IPAddress direc = IPAddress.Parse("192.168.56.102");
-            IPEndPoint ipep = new IPEndPoint(direc, 9015);
+            IPEndPoint ipep = new IPEndPoint(direc, 9016);
 
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
@@ -73,7 +76,7 @@ namespace WindowsFormsApplication1
                 string mensaje = "1/" + user + "/" + fechaPartida.Text;
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
-  
+
 
                 byte[] msg2 = new byte[80];
                 server.Receive(msg2);
@@ -99,7 +102,6 @@ namespace WindowsFormsApplication1
 
             else if (Petición_Eloi.Checked)
             {
-                // NO ESTÀ FET.
                 string mensaje = "3/" + user;
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
@@ -147,7 +149,7 @@ namespace WindowsFormsApplication1
                 byte[] msg2 = new byte[80];
                 server.Receive(msg2);
                 mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-                
+
                 if (mensaje != "-1")
                 {
                     MessageBox.Show("[!] Registrado Satisfactoriamente. [!]");
@@ -159,7 +161,36 @@ namespace WindowsFormsApplication1
                     MessageBox.Show("[!] ERROR en el Registro. [!]");
                 }
             }
-            // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+        }
+
+        // - - - - - - - - - - - - - - - - - BOTÓN LISTA CONECTADOS - - - - - - - - - - - - - - - - - -
+        private void listaconn_Click(object sender, EventArgs e)
+        {
+           string mensaje = "6/";
+           byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+           server.Send(msg);
+            
+           byte[] msg2 = new byte[100];
+           server.Receive(msg2);
+           mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+
+           // Creamos la dataGridView. En cada línea añade el nombre de los usuarios conectados
+           dataGridView1.Rows.Clear();
+           dataGridView1.ColumnCount = 1;
+           dataGridView1.ColumnHeadersVisible = true;
+           if (mensaje != null)
+           {
+               char delimeter = '/';
+               string[] split = mensaje.Split(delimeter);
+               int i;
+               for (i = 1; i < split.Length/2; i++)
+               {
+                   dataGridView1.Rows.Add(split[i]);
+               }
+               dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+           }
         }
     }
 }

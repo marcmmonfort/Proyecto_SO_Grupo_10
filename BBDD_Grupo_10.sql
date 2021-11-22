@@ -4,15 +4,15 @@ CREATE DATABASE Diez;
 USE Diez;
 
 CREATE TABLE Jugador (
-    usuario VARCHAR(60),
-    contraseña VARCHAR(60),
-    IDJugador INT PRIMARY KEY NOT NULL
+    usuario VARCHAR(60) NOT NULL,
+    contra VARCHAR(60) NOT NULL,
+    IDJugador INT PRIMARY KEY NOT NULL AUTO_INCREMENT
 )ENGINE=InnoDB;
 
 CREATE TABLE Partida (
-    ganador VARCHAR(60),
-    fecha VARCHAR(60),
-    IDPartida INT PRIMARY KEY NOT NULL
+    ganador VARCHAR(60) NOT NULL,
+    fecha VARCHAR(60) NOT NULL,
+    IDPartida INT PRIMARY KEY NOT NULL AUTO_INCREMENT
 )ENGINE=InnoDB;
 
 
@@ -24,8 +24,8 @@ CREATE TABLE Participacion (
     FOREIGN KEY (IDP) REFERENCES Partida(IDPartida)  
 )ENGINE=InnoDB;
 
-INSERT INTO Jugador VALUES ('Eloi', 'porros', 1);
-INSERT INTO Jugador VALUES ('Alba', 'lusvui', 2);
+INSERT INTO Jugador VALUES ('Eloi', 'rex123', 1);
+INSERT INTO Jugador VALUES ('Alba', 'asm2001001', 2);
 INSERT INTO Jugador VALUES ('Marc', 'pingpong', 3);
 
 INSERT INTO Partida VALUES ('Marc', '10/10/2021', 1);

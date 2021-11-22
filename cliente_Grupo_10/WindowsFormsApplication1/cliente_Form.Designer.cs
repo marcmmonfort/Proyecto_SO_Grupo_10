@@ -44,11 +44,14 @@
             this.userLogin = new System.Windows.Forms.TextBox();
             this.contraLogin = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listaconn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fechaPartida = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Login = new System.Windows.Forms.RadioButton();
             this.Register = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Conectar
@@ -227,6 +230,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Navy;
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.fechaPartida);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Login);
@@ -250,10 +254,30 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1013, 359);
+            this.groupBox1.Size = new System.Drawing.Size(1367, 359);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Peticiones, Grupo 10";
+            // 
+            // listaconn
+            // 
+            this.listaconn.Location = new System.Drawing.Point(1173, 36);
+            this.listaconn.Name = "listaconn";
+            this.listaconn.Size = new System.Drawing.Size(75, 23);
+            this.listaconn.TabIndex = 31;
+            this.listaconn.Text = "button1";
+            this.listaconn.UseVisualStyleBackColor = true;
+            this.listaconn.Click += new System.EventHandler(this.listaconn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1099, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(212, 308);
+            this.dataGridView1.TabIndex = 9;
             // 
             // fechaPartida
             // 
@@ -308,7 +332,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1045, 458);
+            this.ClientSize = new System.Drawing.Size(1390, 458);
+            this.Controls.Add(this.listaconn);
             this.Controls.Add(this.Desconectar);
             this.Controls.Add(this.Conectar);
             this.Controls.Add(this.groupBox1);
@@ -318,6 +343,7 @@
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,6 +369,8 @@
         private System.Windows.Forms.RadioButton Register;
         private System.Windows.Forms.TextBox fechaPartida;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button listaconn;
     }
 }
 

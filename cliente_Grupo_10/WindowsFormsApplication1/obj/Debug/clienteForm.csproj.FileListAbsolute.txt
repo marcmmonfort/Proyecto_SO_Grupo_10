@@ -141,3 +141,39 @@ C:\share\Proyecto, V1 (18.10.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication
 C:\share\Proyecto, V1 (18.10.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
 C:\share\Proyecto, V1 (18.10.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\share\Proyecto, V1 (18.10.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.cliente_Form.resources
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto_Grupo_10-master\Proyecto_Grupo_10-master\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.cliente_Form.resources
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto, V2 (06.11.2021)_ALBA\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.cliente_Form.resources
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto, V2 (06.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.cliente_Form.resources
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Share\Proyecto, V2 (08.11.2021)_MARC-20211108T102113Z-001\Proyecto, V2 (08.11.2021)_MARC\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
