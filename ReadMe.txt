@@ -13,3 +13,11 @@
 -> Comunicado por Eloi.
 
 - - - - - - - - - - - - - - - - - - - -
+
+>> VERSION 3:
+
+-> Generado por Eloi.
+-> Verificado por Alba.
+-> Comunicado por Marc.
+
+- - - - - - - - - - - - - - - - - - - -

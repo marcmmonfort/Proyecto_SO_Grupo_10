@@ -1,0 +1,22 @@
+//Atendemos al servidor
+        private void AtenderServidor()
+        {
+            while (true)
+            {
+                //Recibimos mensaje del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                string[] trozos = Encoding.ASCII.GetString(msg2).Split('/');
+                int codigo = Convert.ToInt32(trozos[0]);
+
+                switch (codigo)
+                {
+                    1: //respuesta a peticion 1
+                        string mensaje = trozos[1].Split('\0')[0];
+                    MessageBox.Show(user + " tiene " + mensaje + " puntos después de ganar el día " + fechaPartida.Text);
+                    break;
+                }
+                
+                    
+                
+            }

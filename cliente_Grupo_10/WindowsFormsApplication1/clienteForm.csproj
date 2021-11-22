@@ -53,16 +53,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cliente_Form.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cliente_Form.Designer.cs">
-      <DependentUpon>cliente_Form.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIA.Designer.cs">
+      <DependentUpon>SIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comunidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comunidad.Designer.cs">
+      <DependentUpon>Comunidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaz_Grafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz_Grafica.Designer.cs">
+      <DependentUpon>interfaz_Grafica.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="cliente_Form.resx">
-      <DependentUpon>cliente_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comunidad.resx">
+      <DependentUpon>Comunidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="interfaz_Grafica.resx">
+      <DependentUpon>interfaz_Grafica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SIA.resx">
+      <DependentUpon>SIA.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
