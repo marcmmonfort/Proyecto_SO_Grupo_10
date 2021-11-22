@@ -4,7 +4,7 @@
 -> Verificado por Eloi.
 -> Comunicado por Alba.
 
-- - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - -
 
 >> VERSION 2:
 
@@ -12,7 +12,7 @@
 -> Verificado por Marc.
 -> Comunicado por Eloi.
 
-- - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - -
 
 >> VERSION 3:
 
@@ -20,7 +20,7 @@
 -> Verificado por Alba.
 -> Comunicado por Marc.
 
-- - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - -
 
 >> VERSION 4:
 
@@ -28,4 +28,4 @@
 -> Verificado por Eloi.
 -> Comunicado por Alba.
 
-- - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - -
