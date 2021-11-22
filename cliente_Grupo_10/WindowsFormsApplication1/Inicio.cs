@@ -35,13 +35,7 @@ namespace WindowsFormsApplication1
         int bind = 50080;
 
         // - - - - - - - - - - - - - - - - - - - - CLICK AL BOTÓN 'ENVIAR' - - - - - - - - - - - - - - - - - - - -
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-
-        }
-
         
-
         private void enviar_Click(object sender, EventArgs e)
         {
             if (Login.Checked)
@@ -169,7 +163,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-       
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     }

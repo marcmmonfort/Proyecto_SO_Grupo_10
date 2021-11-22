@@ -487,8 +487,7 @@ void *AtenderCliente(void *socket)
 				printf(miLista.conectados[i].nombre);
 				i++;
 			}
-			
-			
+						
 		}
 			
 		else if (codigo ==1) // PETICION DE ALBA.
@@ -580,49 +579,73 @@ void *AtenderCliente(void *socket)
 				
 			int registrar = Register(nombre,contrasena);
 			sprintf(respuesta,"5/%d", registrar);
-			/*int Existe = CheckPassword(nombre, contrasena);
-			if (Existe == 0)
-			{
-				char answer[20];
-				sprintf(answer, "%s", "1");
-				strcpy (respuesta,answer);
-			}
-			else
-			{
-				char answer[20];
-				sprintf(answer, "5/%d", registrar);
-				strcpy (respuesta,answer);
-			}*/
 			
 			pthread_mutex_unlock( &mutex);
-		}
-			
-/*		else if (codigo==6)	// PETICION LISTACONECTADOS.
+		}	
+		
+		else if (codigo == 10) // SI SE RECIBE UNA PETICI�N.
 		{
-			pthread_mutex_lock( &mutex);
-			DameConectados(&miLista,respuesta);//me da una cadena de caracteres separados por / empezando por el numero de conectados y luego el nombre de conectados
-			char copia [512];
-			char *p=strtok(respuesta,"/");
-			int numconectados= atoi(p); //cogemos el numero de conectados
-			sprintf(copia,"%d/",numconectados-1);
-			p=strtok(NULL,"/");//misma rutina de strtok para ir separando los nombres que siguen el mismo patron de orden en la char respuesta
-			while (p!=NULL)
-			{
-				strcat(copia,p);
-				strcat (copia,"/");
-				p=strtok(NULL,"/");
+			// SE DEBE REENVIAR EL MENSAJE DE INVITACI�N A TODOS MENOS AL ORIGINAL:
+			char convidat[100];
+			sprintf(convidat,"10/");
+			char conectados[512];
+			DameConectados(&miLista, conectados);
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], convidat, strlen(convidat));
 			}
-			strcpy(respuesta,copia);		
-			pthread_mutex_unlock( &mutex);
 		}
-*/		
+		
+		else if (codigo == 11) // Recibimos: 11/YES-Marc
+		{
+			char total[500];
+			char nombre[100];
+			char YESorNO[100];
+			p = strtok (NULL, "-");
+			strcpy (YESorNO, p);
+			p = strtok (NULL, "-");
+			strcpy (nombre, p);
+
+			sprintf(total, "12/%s-%s", nombre, YESorNO);
+			
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], total, strlen(total)); // Escribimos a todos el mensaje de YES or NO.
+			}
+		}
+		
+		else if (codigo == 13)
+		{
+			char total[500];
+			sprintf(total, "13/");
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], total, strlen(total));
+			}
+		}
+		
+		else if (codigo == 55)
+		{
+			char total[500];
+			sprintf(total, "55/");
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], total, strlen(total));
+			}
+		}
+		
 		if (codigo != 0)
 		{
 			printf ("Respuesta: %s\n", respuesta);
 			write (sock_conn,respuesta,strlen(respuesta));
 		}
 		
-		if (codigo == 0 || codigo == 4)
+		
+		if (codigo == 0 || codigo == 4) // Si bien alguien se desconecta (0) o se conecta (4), se actualiza la lista de conectados.
 		{
 			char notificacion[512];
 			char conectados[512];
@@ -639,8 +662,6 @@ void *AtenderCliente(void *socket)
 		}
 	}
 	close(sock_conn);
-	//mysql_close (conn);
-		//exit(0);
 }
 
 

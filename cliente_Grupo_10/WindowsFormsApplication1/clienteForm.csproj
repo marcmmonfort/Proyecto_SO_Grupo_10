@@ -65,17 +65,10 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="SIA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SIA.Designer.cs">
-      <DependentUpon>SIA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Comunidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Comunidad.Designer.cs">
-      <DependentUpon>Comunidad.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="interfaz_Grafica.cs">
       <SubType>Form</SubType>
@@ -88,9 +81,6 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Comunidad.resx">
-      <DependentUpon>Comunidad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,16 +89,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="SIA.resx">
-      <DependentUpon>SIA.cs</DependentUpon>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,6 +101,51 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Comunidad_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Comunidad_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Comunidad_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Comunidad_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Comunidad_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tablero_V2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tablero_Completo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Dado_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Dado_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Dado_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Dado_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Dado_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Dado_6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

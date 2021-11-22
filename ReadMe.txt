@@ -21,3 +21,11 @@
 -> Comunicado por Marc.
 
 - - - - - - - - - - - - - - - - - - - -
+
+>> VERSION 4:
+
+-> Generado por Marc.
+-> Verificado por Eloi.
+-> Comunicado por Alba.
+
+- - - - - - - - - - - - - - - - - - - -
