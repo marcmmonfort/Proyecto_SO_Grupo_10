@@ -165,7 +165,6 @@ C:\share\SO_Proyecto_Grupo_10_V3\cliente_Grupo_10\WindowsFormsApplication1\obj\D
 C:\share\SO_Proyecto_Grupo_10_V3\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\share\SO_Proyecto_Grupo_10_V3\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
 C:\share\SO_Proyecto_Grupo_10_V3\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
-C:\Share\SO_Proyecto_Grupo_10_V3\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
 C:\Share\SO_Proyecto_Grupo_10_V3(14-11-2021)\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Share\SO_Proyecto_Grupo_10_V3(14-11-2021)\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 C:\Share\SO_Proyecto_Grupo_10_V3(14-11-2021)\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
@@ -192,3 +191,103 @@ C:\Share\SO_Proyecto_Grupo_10_V3shiva\cliente_Grupo_10\WindowsFormsApplication1\
 C:\Share\SO_Proyecto_Grupo_10_V3shiva\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
 C:\Share\SO_Proyecto_Grupo_10_V3shiva\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Share\SO_Proyecto_Grupo_10_V3shiva\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\SO_Proyecto_Grupo_10_V3\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Test\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\Users\albas\OneDrive\Escritorio\UNIVERSITAT\3A\Sistemes Operatius\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\SO_Proyecto_Grupo_10_V4_Local\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csprojAssemblyReference.cache
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\V5.1_SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\V5.2. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.3. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Share\V5.3. - SO_Proyecto_Grupo_10\V5.4. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\V5.5. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Home.resources
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.interfaz_Grafica.resources
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\V5.7. - SO_Proyecto_Grupo_10\cliente_Grupo_10\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

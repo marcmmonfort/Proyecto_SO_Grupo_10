@@ -1,4 +1,4 @@
-ï»¿// - - - - - - - - - - - LIBRARY - - - - - - - - - - -
+// - - - - - - - - - - - LIBRARY - - - - - - - - - - -
 
 #include <string.h>
 #include <unistd.h>
@@ -11,7 +11,9 @@
 #include <mysql.h>
 #include <pthread.h>
 
-// - - - - - - - - - - - FUNCTIONS - - - - - - - - - - -
+// - - - - - - - - - -
+
+// FUNCTIONS - - - - - - - - - - -
 
 // #0. ESTRUCTURAS. - - - - -
 
@@ -125,7 +127,7 @@ void DameConectados (ListaConectados *lista,char conectados[300])
 	int i;
 	for (i=0;i<lista->num;i++)
 	{
-		sprintf(conectados,"%s-%s",conectados,lista->conectados[i].nombre);
+		sprintf(conectados,"%s-%s|%d",conectados,lista->conectados[i].nombre, DameSocket(&miLista,lista->conectados[i].nombre)); // Devuelve el nombre|socket.
 	}
 }
 
@@ -145,6 +147,7 @@ int NumPartidas(char nombre[50]) {
 		partidas = -1;
 		exit (1);
 	}
+	// conn = mysql_real_connect (conn, "localhost","root", "mysql", "Diez",0, NULL, 0);
 	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T10_BBDD",0, NULL, 0);
 	if (conn==NULL) {
 		partidas = -1;
@@ -193,6 +196,7 @@ int SumaCreditos(char ganador[50], char fecha[50]) {
 		sumCreditos = -1;
 		exit (1);
 	}
+	// conn = mysql_real_connect (conn, "localhost","root", "mysql", "Diez",0, NULL, 0);
 	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T10_BBDD",0, NULL, 0);
 	if (conn==NULL) {
 		sumCreditos = -1;
@@ -242,6 +246,7 @@ int GanadorContra(char nombre[50], char * perdedores){
 	if (conn==NULL) {
 		exit (1);
 	}
+	// conn = mysql_real_connect (conn, "localhost","root", "mysql", "Diez",0, NULL, 0);
 	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T10_BBDD",0, NULL, 0);
 	if (conn==NULL) {
 		exit (1);
@@ -308,6 +313,7 @@ int CheckNombre(char nombre[50])
 				mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
+	// conn = mysql_real_connect (conn, "localhost","root", "mysql", "Diez",0, NULL, 0);
 	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T10_BBDD",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexion: %u %s\n",
@@ -354,6 +360,7 @@ int CheckPassword(char nombre[50], char contra[50])
 				mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
+	// conn = mysql_real_connect (conn, "localhost","root", "mysql", "Diez",0, NULL, 0);
 	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T10_BBDD",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexion: %u %s\n",
@@ -410,6 +417,7 @@ int Register(char nombre[50], char contra[50])
 				mysql_errno(conn), mysql_error(conn));
 		exit (1);
 	}
+	// conn = mysql_real_connect (conn, "localhost","root", "mysql", "Diez",0, NULL, 0);
 	conn = mysql_real_connect (conn, "shiva2.upc.es","root", "mysql", "T10_BBDD",0, NULL, 0);
 	if (conn==NULL) {
 		printf ("Error al inicializar la conexion: %u %s\n",
@@ -484,11 +492,10 @@ void *AtenderCliente(void *socket)
 			int i=0;
 			while (i<miLista.num)
 			{
-				printf(miLista.conectados[i].nombre);
+				printf("%s",miLista.conectados[i].nombre);
 				i++;
 			}
-			
-			
+						
 		}
 			
 		else if (codigo ==1) // PETICION DE ALBA.
@@ -579,51 +586,111 @@ void *AtenderCliente(void *socket)
 			strcpy (contrasena, p);
 				
 			int registrar = Register(nombre,contrasena);
-			sprintf(respuesta,"5/%d", registrar);
-			/*int Existe = CheckPassword(nombre, contrasena);
-			if (Existe == 0)
-			{
-				char answer[20];
-				sprintf(answer, "%s", "1");
-				strcpy (respuesta,answer);
-			}
-			else
-			{
-				char answer[20];
-				sprintf(answer, "5/%d", registrar);
-				strcpy (respuesta,answer);
-			}*/
+			sprintf(respuesta,"5/%d\n", registrar);
 			
 			pthread_mutex_unlock( &mutex);
-		}
-			
-/*		else if (codigo==6)	// PETICION LISTACONECTADOS.
+		}	
+		
+		else if (codigo == 10) // SI SE RECIBE UNA PETICIÓN.
 		{
+			// SE DEBE REENVIAR EL MENSAJE DE INVITACIÓN A TODOS MENOS AL ORIGINAL:
 			pthread_mutex_lock( &mutex);
-			DameConectados(&miLista,respuesta);//me da una cadena de caracteres separados por / empezando por el numero de conectados y luego el nombre de conectados
-			char copia [512];
-			char *p=strtok(respuesta,"/");
-			int numconectados= atoi(p); //cogemos el numero de conectados
-			sprintf(copia,"%d/",numconectados-1);
-			p=strtok(NULL,"/");//misma rutina de strtok para ir separando los nombres que siguen el mismo patron de orden en la char respuesta
-			while (p!=NULL)
-			{
-				strcat(copia,p);
-				strcat (copia,"/");
-				p=strtok(NULL,"/");
+			char convidat[100];
+			sprintf(convidat,"10/\n");
+			char conectados[512];
+			DameConectados(&miLista, conectados);
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], convidat, strlen(convidat));
 			}
-			strcpy(respuesta,copia);		
 			pthread_mutex_unlock( &mutex);
-		}
-*/		
-		if (codigo != 0)
-		{
-			printf ("Respuesta: %s\n", respuesta);
-			write (sock_conn,respuesta,strlen(respuesta));
 		}
 		
-		if (codigo == 0 || codigo == 4)
+		else if (codigo == 11) // Recibimos: 11/YES-Marc
 		{
+			pthread_mutex_lock( &mutex);
+			char total[500];
+			char nombre[100];
+			char YESorNO[100];
+			p = strtok (NULL, "-");
+			strcpy (YESorNO, p);
+			p = strtok (NULL, "-");
+			strcpy (nombre, p);
+
+			sprintf(total, "12/%s-%s\n", nombre, YESorNO);
+			
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], total, strlen(total)); // Escribimos a todos el mensaje de YES or NO.
+			}
+			pthread_mutex_unlock( &mutex);
+		}
+		
+		else if (codigo == 13)
+		{
+			pthread_mutex_lock( &mutex);
+			char total[500];
+			sprintf(total, "13/\n");
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], total, strlen(total));
+			}
+			pthread_mutex_unlock( &mutex);
+		}
+		
+		else if (codigo == 55)
+		{
+			pthread_mutex_lock( &mutex);
+			char total[500];
+			sprintf(respuesta, "55/\n");
+			pthread_mutex_unlock( &mutex);
+		}
+
+		else if (codigo == 15) //Recibimos 15/Eloi
+		{
+			pthread_mutex_lock( &mutex);
+			char nombre[50];
+			p = strtok( NULL, "/");
+			strcpy (nombre, p);
+			int socket = DameSocket (&miLista, nombre);
+			char mensaje[100];
+			sprintf(mensaje,"10/%s", nombre);
+			write (socket, mensaje, strlen(mensaje));
+			
+			printf("%s, %d \n", nombre,socket);
+			
+			pthread_mutex_unlock( &mutex);
+		}
+		
+		else if (codigo == 28)
+		{
+			pthread_mutex_lock( &mutex);
+			char missatge[500];
+			p = strtok(NULL, "/");
+			sprintf(missatge, "28/%s\n", p);
+			int j;
+			for (j=0; j<miLista.num; j++)
+			{			
+				write (sockets[j], missatge, strlen(missatge));
+			}
+			pthread_mutex_unlock( &mutex);
+		}
+		
+		if ((codigo != 0) && ((codigo != 28)))
+		{
+			pthread_mutex_lock( &mutex);
+			printf ("Respuesta: %s\n", respuesta);
+			write (sock_conn,respuesta,strlen(respuesta));
+			pthread_mutex_unlock( &mutex);
+		}
+		
+		
+		if (codigo == 0 || codigo == 4) // Si bien alguien se desconecta (0) o se conecta (4), se actualiza la lista de conectados.
+		{
+			pthread_mutex_lock( &mutex);
 			char notificacion[512];
 			char conectados[512];
 			DameConectados(&miLista, conectados);
@@ -636,11 +703,10 @@ void *AtenderCliente(void *socket)
 			{			
 				write (sockets[j], notificacion, strlen(notificacion));
 			}
+			pthread_mutex_unlock( &mutex);
 		}
 	}
 	close(sock_conn);
-	//mysql_close (conn);
-		//exit(0);
 }
 
 
@@ -660,6 +726,7 @@ int main(int argc, char *argv[])
 	
 	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
 	serv_adr.sin_port = htons(50080);
+	// <V4> HAY QUE PONER serv_adr.sin_port = htons(9010);
 	
 	if (bind(sock_listen, (struct sockaddr *) &serv_adr, sizeof(serv_adr)) < 0)
 		printf ("Error al bind");
@@ -670,7 +737,7 @@ int main(int argc, char *argv[])
 	int i;
 	pthread_t thread[100];
 	
-	for (i=0;i<100;i++)
+	for (i=0;i>-1;i++)
 	{ // Bucle infinito (siempre escucha).
 		printf ("Escuchando\n");
 		sock_conn = accept(sock_listen, NULL, NULL);
