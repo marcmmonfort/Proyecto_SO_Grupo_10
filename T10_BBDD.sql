@@ -27,6 +27,7 @@ CREATE TABLE Participacion (
 INSERT INTO Jugador VALUES ('Eloi', 'rex123', 1);
 INSERT INTO Jugador VALUES ('Alba', 'asm2001001', 2);
 INSERT INTO Jugador VALUES ('Marc', 'pingpong', 3);
+INSERT INTO Jugador VALUES ('Miguel', 'valero', 4);
 
 INSERT INTO Partida VALUES ('Marc', '10/10/2021', 1);
 

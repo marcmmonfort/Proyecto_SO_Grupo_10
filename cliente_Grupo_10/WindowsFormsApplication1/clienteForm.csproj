@@ -150,6 +150,141 @@
   <ItemGroup>
     <None Include="Properties\Inicio_Fondo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tablero_Completo_V2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\COMUNIDAD8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SIA22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Ficha1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Ficha2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Ficha3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Ficha4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Flecha_Definitiva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Despedida.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Despedida_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Despedida_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tablero_Completo_V3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tablero_Completo_V5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tirar_Dados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Tablero_Completo_V6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Home_V1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Interfaz_Resultados_V1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

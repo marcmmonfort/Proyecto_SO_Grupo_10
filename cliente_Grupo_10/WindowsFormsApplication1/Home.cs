@@ -24,14 +24,47 @@ namespace WindowsFormsApplication1
 
         interfaz_Grafica IG;
 
+        // JUGADORES DE LA PARTIDA:
+
+        string user1 = "";
+        string user2 = "";
+        string user3 = "";
+        string user4 = "";
+
+        // NUMERO DE USUARIO QUE CORRESPONDE A ESTE CLIENTE:
+
+        int idFichaUser;
+
+        // NUMERO DE PARTIDA EN LA QUE ESTA JUGANDO ESTE CLIENTE:
+
+        int idPartida;
+
+        // INVITADOS:
+
+        string invitados = "15/";
+
+        // NUMERO DE INVITADOS INDIVIDUALES:
+
+        int contador = 0;
+
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        // Delegados del programa:
+        // >>> Delegados de Home:
 
         delegate void DelegadoParaEscribir(string mensaje);
         delegate void DelegadoParaActualizar(string nombre, string YESorNO);
         delegate void DelegadoTimer(string RS);
+        delegate void NotificacionesRespuestaPeticiones(string mensaje);
+
+        // >>> Delegados de la Interfaz Gráfica:
         delegate void DelegadoChat(string mensaje);
+        delegate void DelegadoNotificacion(string mensaje);
+        delegate void DelegadoTurno(int torn);
+        delegate void DelegadoFichas(int IDF, string CX, string CY);
+        delegate void DelegadoDinero(int IDF, double dinero);
+        delegate void DelegadoCreditos(int IDF, double creditos);
+        delegate void DelegadoOwners(string USUARI, int IDPOS);
+        delegate void DelegadoAcabarPartida(string n1, double c1, string n2, double c2, string n3, double c3, string n4, double c4);
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -55,102 +88,151 @@ namespace WindowsFormsApplication1
         string fecha;
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+        
         // ATENDER SERVIDOR DES DEL MENÚ (HOME).
 
         private void AtenderServidor()
         {
             while (true)
             {
-                //Recibimos mensaje del servidor
-                byte[] msg2 = new byte[80];
+                byte[] msg2 = new byte[300];
                 server.Receive(msg2);
                 string[] trozos = Encoding.ASCII.GetString(msg2).Split('/');
-                // MessageBox.Show(trozos[0]); // TEST.
+
+                // MessageBox.Show("El usuario "+user+"ha recibido: "+trozos[0]); // #AQUI
+
                 int codigo = Convert.ToInt32(trozos[0]);
                 string mensaje = trozos[1].Split('\0')[0];
                 switch (codigo)
                 {
+                    /*
                     case 1: // Respuesta a la Petición 1.
                         if (mensaje == "-1")
-                            MessageBox.Show(user + " no tiene puntos.");
+                        {
+                            string comentari = user + " no tiene puntos.";
+                            NotificacionesRespuestaPeticiones escriure1 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure1, new object[] { comentari });
+                        }
                         else
-                            MessageBox.Show(user + " tiene " + mensaje + " puntos después de ganar el día " + fechaPartida.Text);
+                        {
+                            string comentari = user + " tiene " + mensaje + " puntos después de ganar el día " + fechaPartida.Text;
+                            NotificacionesRespuestaPeticiones escriure2 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure2, new object[] { comentari });
+                        }
                         break;
+                    */
 
                     case 2: // Respuesta a la Petición 2.
 
                         if (mensaje == "-1")
-                            MessageBox.Show(user + " no ha jugado ninguna partida.");
+                        {
+                            string comentari = user + " no ha jugado ninguna partida.";
+                            NotificacionesRespuestaPeticiones escriure3 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure3, new object[] { comentari });
+                        }
                         else if (mensaje == "1")
-                            MessageBox.Show(user + " ha jugado " + mensaje + " partida.");
+                        {
+                            string comentari = user + " ha jugado " + mensaje + " partida.";
+                            NotificacionesRespuestaPeticiones escriure4 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure4, new object[] { comentari });
+                        }
                         else
-                            MessageBox.Show(user + " ha jugado " + mensaje + " partidas.");
+                        {
+                            string comentari = user + " ha jugado " + mensaje + " partidas.";
+                            NotificacionesRespuestaPeticiones escriure5 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure5, new object[] { comentari });
+                        }
                         break;
 
                     case 3: // Respuesta a la Petición 3.
 
                         if (mensaje == "-1")
-                            MessageBox.Show(user + " no ha ganado a nadie.");
+                        {
+                            string comentari = user + " no ha ganado a nadie.";
+                            NotificacionesRespuestaPeticiones escriure6 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure6, new object[] { comentari });
+                        }
                         else
-                            MessageBox.Show(user + " ha ganado a: " + mensaje);
-                        break;
+                        {
+                            string jugador1 = mensaje;
+                            string jugador2 = trozos[2];
+                            string jugador3 = trozos[3];
 
+                            string comentari = user + " ha ganado a:\n" + jugador1 +"\n" + jugador2 + "\n" + jugador3;
+                            NotificacionesRespuestaPeticiones escriure7 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                            notificacionHome.Invoke(escriure7, new object[] { comentari });
+                        }
+                        break;
+                    
+                    /*
                     case 5: // Respuesta a la Petición 5. // ¿ESTO NO ESTÁ DUPLICADO?
 
-                        MessageBox.Show(user + " tiene " + mensaje + " puntos después de ganar el día " + fechaPartida.Text);
+                        string comentari2 = user + " tiene " + mensaje + " puntos después de ganar el día " + fechaPartida.Text;
+                        NotificacionesRespuestaPeticiones escriure8 = new NotificacionesRespuestaPeticiones(EscribirEnHome);
+                        notificacionHome.Invoke(escriure8, new object[] { comentari2 });
                         break;
+                    */
 
-                    case 6: // Notificación.
+                    case 6: // Notificación de actualizar la lista de conectados.
 
                         DelegadoParaEscribir delegado = new DelegadoParaEscribir(PonListaConectados);
                         gridListaConectados.Invoke(delegado, new object[] {mensaje});
                         break;
 
                     case 10: // Te estan invitando a una partida.
-
-                        // Delegado para arrancar el Timer en todos los formularios:
-                        string RS = "R"; // Queremos que el timer arranque.
-                        DelegadoTimer D = new DelegadoTimer(ControlarReloj);
-                        Invoke(D, new object[] { RS });
-
-                        if (hasInvitado == false) // Si no eres tu el que has invitado...
+                        if (mensaje == "-1")
                         {
-                            DialogResult dialogResult = MessageBox.Show(user + ", ¿quieres unirte a una partida?", "Invitación", MessageBoxButtons.YesNo);
-                            if (dialogResult == DialogResult.Yes) // SI ACEPTAMOS PARTICIPAR.
+                            MessageBox.Show("No puedes iniciar otra partida");
+                        }
+                        else
+                        {
+                            // Delegado para arrancar el Timer en todos los formularios:
+                            string RS = "R"; // Queremos que el timer arranque.
+                            DelegadoTimer D = new DelegadoTimer(ControlarReloj);
+                            Invoke(D, new object[] { RS });
+                            string[] trocitos = mensaje.Split(',');
+                            string creador = trocitos[0];
+                            int idPartida = Convert.ToInt32(trocitos[1]);
+
+                            if (hasInvitado == false) // Si no eres tu el que has invitado...
                             {
-                                string answer = "11/YES-" + user;
-                                byte[] msg = System.Text.Encoding.ASCII.GetBytes(answer);
-                                server.Send(msg);
-                            }
-                            else if (dialogResult == DialogResult.No) // NO ACEPTAMOS PARTICIPAR.
-                            {
-                                string answer = "11/NO-" + user;
-                                byte[] msg = System.Text.Encoding.ASCII.GetBytes(answer);
-                                server.Send(msg);
+                                DialogResult dialogResult = MessageBox.Show(user + ", ¿quieres unirte a una partida?", "Invitación", MessageBoxButtons.YesNo);
+                                if (dialogResult == DialogResult.Yes) // SI ACEPTAMOS PARTICIPAR.
+                                {
+                                    string answer = "11/YES/" + user + "/" + idPartida.ToString();
+                                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(answer);
+                                    server.Send(msg);
+                                }
+                                else if (dialogResult == DialogResult.No) // NO ACEPTAMOS PARTICIPAR.
+                                {
+                                    string answer = "11/NO/" + user + "/" + idPartida.ToString();
+                                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(answer);
+                                    server.Send(msg);
+                                }
                             }
                         }
-                        else if (hasInvitado == true) // Si eres el que invita, claramente vas a jugar.
-                        {
-                            string answer = "11/YES-" + user;
-                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(answer);
-                            server.Send(msg);
-                        }
+                       
                         break;
 
                     case 12: // Estás recibiendo una respuesta a la invitación de una partida.
-                        
-                        char delimeter = '-';
-                        string[] split = mensaje.Split(delimeter);
-                        string nombre = split[0];
-                        string YESorNO = split[1];
 
-                        if (YESorNO == "NO")
+                        // AQUÍ SE RECIBE "12/1-Marc|1-Eloi|1-Vinicius|1-RDT|1"
+                        // mensaje: "1-Marc|1-Eloi|1-Vinicius|1-RDT|1"
+
+                        if (mensaje =="-1")
                         {
-                            AceptanTodos = false; // Cuando alguien rechaza la partida, ya no se juega.
+                            MessageBox.Show("Esta partida no está disponible");
                         }
+                        else if (mensaje == "-2")
 
-                        DelegadoParaActualizar delegat = new DelegadoParaActualizar(ActualizarEstados);
-                        Invoke(delegat, new object[] {nombre, YESorNO});
+                        {
+                            MessageBox.Show("Esta partida ya está completa");
+                        }
+                        else
+                        {
+                            DelegadoParaEscribir delegat = new DelegadoParaEscribir(PonListaPartidas);
+                            estadoInvitados.Invoke(delegat, new object[] { mensaje });
+                        }
 
                         break;
 
@@ -159,20 +241,130 @@ namespace WindowsFormsApplication1
                         MessageBox.Show("No todos los jugadores han aceptado la partida. Prueba de nuevo.");
                         break;
 
-                    case 55: // Si todos han aceptado las partidas y, por lo tanto, se juega:
+                    case 14: // La partida ya está completa y se abre el tablero de juego.
 
-                        ThreadStart ts = delegate { PonerEnMarchaInterfazGrafica(); };
-                        Thread Open = new Thread(ts);
-                        Open.Start();
+                        // mensaje: "Marc|Eloi|Alba|Miguel"
+
+                        // 1. Se asignan los nombres a cada jugador:
+                        char delimeter = '|';
+                        string[] split = mensaje.Split(delimeter);
+                        user1 = split[0];
+                        user2 = split[1];
+                        user3 = split[2];
+                        user4 = split[3];
+
+                        // 2. Identificamos que jugador somos:
+                        if (user1 == user)
+                        {
+                            idFichaUser = 1;
+                        }
+                        else if (user2 == user)
+                        {
+                            idFichaUser = 2;
+                        }
+                        else if (user3 == user)
+                        {
+                            idFichaUser = 3;
+                        }
+                        else if (user4 == user)
+                        {
+                            idFichaUser = 4;
+                        }
+
+                        // 3. Abrimos la interfaz gráfica:
+                        ThreadStart ts1 = delegate { PonerEnMarchaInterfazGrafica(); };
+                        Thread Open1 = new Thread(ts1);
+                        Open1.Start();
                         break;
 
-                    case 15:
-                        MessageBox.Show(mensaje + " Has sido invitado.");
-                        break;
+                    /*case 55: // Si todos han aceptado las partidas y, por lo tanto, se juega:
+                        ThreadStart ts2 = delegate { PonerEnMarchaInterfazGrafica(); };
+                        Thread Open2 = new Thread(ts2);
+                        Open2.Start();
+                        break;*/
 
                     case 28: // Cuando se recibe la notificación de un mensaje nuevo:
-                        DelegadoChat delegated = new DelegadoChat(IG.ActualizarChat);
-                        Invoke(delegated, new object[] { mensaje});
+                        DelegadoChat delegated1 = new DelegadoChat(IG.ActualizarChat);
+                        Invoke(delegated1, new object[] { mensaje});
+                        break;
+
+                    case 52: // Llega una notificacion para escribir en el formulario:
+                        // 'mensaje' es todo lo que llega despues del 52.
+                        // Deberíamos recibir el formato: '52/[JUGADOR 1: Marc] -> Ha pasado por meta. Gana 500€.'.
+                        DelegadoNotificacion delegated2 = new DelegadoNotificacion(IG.UseEscribirNotificacion);
+                        Invoke(delegated2, new object[] { mensaje });
+                        break;
+
+                    case 53: // Nos llega información de un turno a gestionar:
+                        // Deberíamos recibir el formato: '53/turno'.
+                        // mensaje seria el turno (en string).
+                        int turno = Convert.ToInt32(mensaje);
+                        DelegadoTurno delegated3 = new DelegadoTurno(IG.UseGestorDeTurnos);
+                        Invoke(delegated3, new object[] { turno });
+                        break;
+
+                    case 54: // Nos llega información de la posición de una nueva ficha.
+                        // Formato que nos llega:'54/numFicha-PosX-PosY'.
+                        // mensaje: 'numFicha-PosX-PosY'.
+                        char separador1 = '|';
+                        string[] parte1 = mensaje.Split(separador1);
+                        int idFitxa = Convert.ToInt32(parte1[0]);
+                        string PositionX = parte1[1];
+                        string PositionY = parte1[2];
+                        DelegadoFichas delegated4 = new DelegadoFichas(IG.UsoGestorFichas);
+                        Invoke(delegated4, new object[] { idFitxa, PositionX, PositionY });
+                        break;
+
+                    case 58: // Nos llega información de un usuario, cuyo dinero hay que modificar:
+                        // Nos llega: 'fitxa|dinero'.
+                        char separador2 = '|';
+                        string[] parte2 = mensaje.Split(separador2);
+                        int IDFitxaA = Convert.ToInt32(parte2[0]);
+                        double dinero = Convert.ToDouble(parte2[1]);
+
+                        DelegadoDinero delegate5 = new DelegadoDinero(IG.UsoGestorDinero);
+                        Invoke(delegate5, new object[] { IDFitxaA, dinero });
+
+                        break;
+                    case 59: // Nos llega información de un usuario, cuyos creditos hay que modificar:
+                        // Nos llega: 'fitxa|creditos'.
+                        char separador3 = '|';
+                        string[] parte3 = mensaje.Split(separador3);
+                        int IDFitxaB = Convert.ToInt32(parte3[0]);
+                        double creditos = Convert.ToDouble(parte3[1]);
+
+                        DelegadoCreditos delegate6 = new DelegadoCreditos(IG.UsoGestorCreditos);
+                        Invoke(delegate6, new object[] { IDFitxaB, creditos });
+
+                        break;
+
+                    case 61: // Nos llega el nombre de un usuario y el índice de la casilla que ha suspendido:
+                        // Formato de mensaje: 'user|idPosOwners'.
+                        char separador4 = '|';
+                        string[] parte4 = mensaje.Split(separador4);
+                        string usuari = parte4[0];
+                        int idPositionOwners = Convert.ToInt32(parte4[1]);
+
+                        DelegadoOwners delegate7 = new DelegadoOwners(IG.UsoGestorOwners);
+                        Invoke(delegate7, new object[] { usuari, idPositionOwners });
+
+                        break;
+
+                    case 77: // Nos llega la notificación de fin de partida, con los resultados de esta:
+                        // Formato: 'nomP1|cP1|nomP2|cP2|nomP3|cP3|nomP4|cP4'.
+
+                        char separador5 = '|';
+                        string[] parte5 = mensaje.Split(separador5);
+
+                        string NomP1 = parte5[0]; double CreditsP1 = Convert.ToDouble(parte5[1]);
+                        string NomP2 = parte5[2]; double CreditsP2 = Convert.ToDouble(parte5[3]);
+                        string NomP3 = parte5[4]; double CreditsP3 = Convert.ToDouble(parte5[5]);
+                        string NomP4 = parte5[6]; double CreditsP4 = Convert.ToDouble(parte5[7]);
+
+                        // delegate void DelegadoAcabarPartida(string n1, double c1, string n2, double c2, string n3, double c3, string n4, double c4);
+                        DelegadoAcabarPartida delegate8 = new DelegadoAcabarPartida(IG.UsoResultadosPartida);
+                        Invoke(delegate8, new object[] { NomP1, CreditsP1, NomP2, CreditsP2, NomP3, CreditsP3, NomP4, CreditsP4 });
+
                         break;
                 }
             }
@@ -180,19 +372,25 @@ namespace WindowsFormsApplication1
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+        // - - - - - - - - - - Función que se usará para escribir notificaciones en Home: - - - - - - - - - -
+
+        public void EscribirEnHome(string mensaje)
+        {
+            notificacionHome.Text = mensaje;
+        }
+
         // - - - - - - - - - - Función que se usará para abrir la Interfaz Gráfica: - - - - - - - - - -
 
         private void PonerEnMarchaInterfazGrafica()
         {
-            interfaz_Grafica frm = new interfaz_Grafica(server, user);
+            interfaz_Grafica frm = new interfaz_Grafica(server, user, user1, user2, user3, user4, idFichaUser, idPartida);
             this.IG = frm;
             // frm.Show(); 
+            // MessageBox.Show("¡Partida lista! Pulsa [OK] para abrir el tablero. | LA ID DE LA PARTIDA DE ESTE USUARIO ES:" + idPartida); // #ERRORES
             frm.ShowDialog();
         }
 
         // - - - - - - - - - - Funciones que se usarán con delegados: - - - - - - - - - -
-
-
 
         public void ControlarReloj(string RS)
         {
@@ -257,16 +455,61 @@ namespace WindowsFormsApplication1
         }
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        public void PonListaPartidas(string mensaje)
+        {
+            estadoInvitados.Rows.Clear();
+            estadoInvitados.ColumnCount = 2; // Columna 1: Nombre. + Columna 2: idPartida.
+            estadoInvitados.Columns[0].HeaderText = "User";
+            estadoInvitados.Columns[1].HeaderText = "idPartida";
+            estadoInvitados.GridColor = Color.LightGray;
+            estadoInvitados.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            estadoInvitados.EnableHeadersVisualStyles = false;
+
+            // mensaje: "1-Marc|1-Eloi|1-Vinicius|1-RDT|1"
+
+            // split[1] : "Marc|1"
+            // split[2] : "Eloi|1"
+            // split[3] : "Vinicius|1"
+            // split[4] : "RDT|1"
+
+            if (mensaje != null)
+            {
+                char delimeter = '-';
+                string[] split = mensaje.Split(delimeter);
+                int i = 1;
+                while (i < split.Length)
+                {
+                    string pack = split[i];
+                    string[] nameIDP = pack.Split('|');
+
+                    string usuario = nameIDP[0];
+                    int IDP = Convert.ToInt32(nameIDP[1]);
+
+                    // SI UNO DE LOS NOMBRES ES EL NUESTRO, GUARDAMOS LA ID DE LA PARTIDA:
+                    if (usuario==user)
+                    {
+                        this.idPartida = IDP;
+                    }
+
+                    estadoInvitados.Rows.Add(usuario, IDP);
+                    i = i + 1;
+                }
+                estadoInvitados.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
+            estadoInvitados.ClearSelection();
+        }
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
         public Home()
         {
             InitializeComponent();
-            //CheckForIllegalCrossThreadCalls = false;
-       
-            // CANVI
-            // pongo en marcha el thread que atenderá los mensajes del servidor
-            ThreadStart ts = delegate { AtenderServidor(); };
-            atender = new Thread(ts);
+
+            // CheckForIllegalCrossThreadCalls = false;
+            // CANVI!
+            // Pongo en marcha el thread que atenderá los mensajes del servidor:
+
+            ThreadStart ts0 = delegate { AtenderServidor(); };
+            atender = new Thread(ts0);
             atender.Start();
         }
 
@@ -292,6 +535,7 @@ namespace WindowsFormsApplication1
 
             // ---> PETICIÓN DE ALBA A LA BASE DE DATOS (Radio Button): - - - - - - - - - -
 
+            /*
             if (Petición_Alba.Checked)
             {
                 string mensaje = "1/" + user + "/" + fechaPartida.Text;
@@ -306,8 +550,9 @@ namespace WindowsFormsApplication1
                 }
 
             }
+            */
             // ---> PETICIÓN DE MARC A LA BASE DE DATOS (Radio Button): - - - - - - - - - -
-            else if (Petición_Marc.Checked)
+            if (Petición_Marc.Checked)
             {
                 string mensaje = "2/" + user;
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
@@ -329,6 +574,21 @@ namespace WindowsFormsApplication1
         private void Home_Load(object sender, EventArgs e)
         {
             cuentaAtras.Interval = 1000;
+
+            // Ponemos el nombre del usuario al que pertenece el formulario.
+            idUsuario.Text = user;
+
+            // MÉTODO PARA QUE SE ABRA EL FORMULARIO EN EL CENTRO DE CUALQUIER PANTALLA.
+            // (Sea cual sea el tamaño de la pantalla).
+            int screenH = Screen.PrimaryScreen.Bounds.Height;
+            int screenW = Screen.PrimaryScreen.Bounds.Width;
+            int formH = 554;
+            int formW = 711;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point((screenW / 2 - formW / 2), (screenH / 2 - formH / 2));
+
+            // BLOQUEA EL MOVIMIENTO DEL FORMULARIO.
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
         private void crearPartida_Click(object sender, EventArgs e)
@@ -342,7 +602,7 @@ namespace WindowsFormsApplication1
 
             // COMO SE HACE LA INVITACIÓN:
 
-            string mensaje = "10/"; // Se invita a todo el mundo.
+            string mensaje = "10/"+user; // Se invita a todo el mundo.
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
 
@@ -383,11 +643,13 @@ namespace WindowsFormsApplication1
                 }
                 else if (AceptanTodos == true)
                 {
+                    /*
                     // Se crea la partida y, por lo tanto, se abren los tableros en todos los usuarios.
                     string mensaje = "55/";
                     byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                     server.Send(msg);
                     hasInvitado = false; // Ya no has invitado.
+                    */
                 }
             }
             if (AceptanTodos == false)
@@ -431,28 +693,92 @@ namespace WindowsFormsApplication1
             server.Close();
         }
 
-        private void gridListaConectados_CellClick(object sender, DataGridViewCellEventArgs e)
+        // INVITAR SELECCIONANDO A TUS AMIGOS.
+
+        private void InvitarAmigos_Click(object sender, EventArgs e)
         {
-            var nombre = gridListaConectados.Rows[e.RowIndex].Cells[0].Value;
-            var socket = gridListaConectados.Rows[e.RowIndex].Cells[1].Value;
+            cuentaAtras.Start();
+            hasInvitado = true; // Declaramos que ha sido este cliente el que ha invitado a los demás.
+            AceptanTodos = true; // Consideramos para empezar que nadie rechaza la partida.
+            tiempo.ForeColor = Color.LightGray;
+            creandoPartida = true; // Se inicia el proceso de creación de la partida.
+            tiempo.Text = "30";
 
+            if (contador == 3) // CUANDO HAS INVITADO A 3.
+            {
+                // COMO SE HACE LA INVITACIÓN:
 
-            
+                string mensaje = invitados; // Se invita a todo el mundo.
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
 
-           
-            string mensaje = "15/" + nombre.ToString(); // Se invita a un usuario
+                // CUANDO INVITAS, CREAS DIRECTAMENTE EL DATAGRIDVIEW DE ESTADOS DE INVITACIONES:
+
+                estadoInvitados.Rows.Clear();
+                estadoInvitados.ColumnCount = 1;
+                estadoInvitados.GridColor = Color.LightGray;
+
+                contador = 0;
+            }
+        }
+
+        private void gridListaConectados_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            // Sumamos uno al contador de invitados:
+            contador = contador + 1;
+
+            string nombre = Convert.ToString(gridListaConectados.Rows[row].Cells[0].Value);
+            string[] trozos1 = nombre.Split('\0');
+            if (trozos1[0] != user)
+            {
+                if (gridListaConectados.Rows[row].Cells[0].Style.BackColor == Color.Green)
+                {
+                    string mensaje = "15/" + user + "/";
+                    string[] trozos2 = invitados.Split('/');
+                    int i = 2;
+                    while (i < trozos2.Length && trozos2[i] != "")
+                    {
+                        nombre = Convert.ToString(gridListaConectados.Rows[row].Cells[0].Value);
+                        trozos1 = nombre.Split('\0');
+                        if (trozos2[i] != trozos1[0])
+                        {
+                            mensaje = mensaje + trozos2[i] + "/";
+                        }
+                        i = i + 1;
+                    }
+                    invitados = mensaje;
+                    gridListaConectados.Rows[row].Cells[0].Style.BackColor = Color.LightGray;
+                }
+                else
+                {
+                    nombre = Convert.ToString(gridListaConectados.Rows[row].Cells[0].Value);
+                    trozos1 = nombre.Split('\0');
+                    invitados = invitados + user + "/" + trozos1[0] + "/";
+                    gridListaConectados.Rows[row].Cells[0].Style.BackColor = Color.Green;
+                }
+            }
+            else
+                MessageBox.Show("No puedes seleccionarte a ti mismo.");
+        }
+
+        private void eliminarUsuario_Click(object sender, EventArgs e)
+        {
+            string mensaje = "85/" + user + ",";
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
-            hasInvitado = true;
-            string answer = "11/YES-" + user;
-            byte[] msg2 = System.Text.Encoding.ASCII.GetBytes(answer);
+
+            // DEIXEM TEMPS PERQUE EL SERVIDOR ENS BORRI DE LA BBDD:
+            Thread.Sleep(200);
+
+            // ENS DESCONECTEM:
+            atender.Abort();
+            string mensaje2 = "0/" + user;
+            byte[] msg2 = System.Text.Encoding.ASCII.GetBytes(mensaje2);
             server.Send(msg2);
-
-
-
-            estadoInvitados.Rows.Clear();
-            estadoInvitados.ColumnCount = 1;
-            estadoInvitados.GridColor = Color.LightGray;
+            server.Shutdown(SocketShutdown.Both);
+            server.Close();
+            this.Close();
         }
     }
 

@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Register = new System.Windows.Forms.RadioButton();
             this.Login = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +42,12 @@ namespace WindowsFormsApplication1
             this.contraLogin = new System.Windows.Forms.TextBox();
             this.enviar = new System.Windows.Forms.Button();
             this.cerrar = new System.Windows.Forms.Button();
+            this.nom = new System.Windows.Forms.Label();
+            this.tempsMin = new System.Windows.Forms.Label();
+            this.tempsSec = new System.Windows.Forms.Label();
+            this.textMin = new System.Windows.Forms.Label();
+            this.textSec = new System.Windows.Forms.Label();
+            this.tempsPartida = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // Register
@@ -158,9 +165,9 @@ namespace WindowsFormsApplication1
             this.enviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(45)))), ((int)(((byte)(91)))));
             this.enviar.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enviar.ForeColor = System.Drawing.Color.GhostWhite;
-            this.enviar.Location = new System.Drawing.Point(148, 201);
+            this.enviar.Location = new System.Drawing.Point(151, 201);
             this.enviar.Name = "enviar";
-            this.enviar.Size = new System.Drawing.Size(113, 23);
+            this.enviar.Size = new System.Drawing.Size(110, 23);
             this.enviar.TabIndex = 37;
             this.enviar.Text = "Enviar";
             this.enviar.UseVisualStyleBackColor = false;
@@ -173,11 +180,75 @@ namespace WindowsFormsApplication1
             this.cerrar.ForeColor = System.Drawing.Color.GhostWhite;
             this.cerrar.Location = new System.Drawing.Point(267, 201);
             this.cerrar.Name = "cerrar";
-            this.cerrar.Size = new System.Drawing.Size(117, 23);
+            this.cerrar.Size = new System.Drawing.Size(108, 23);
             this.cerrar.TabIndex = 38;
             this.cerrar.Text = "Cerrar Juego";
             this.cerrar.UseVisualStyleBackColor = false;
             this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
+            // 
+            // nom
+            // 
+            this.nom.BackColor = System.Drawing.Color.Transparent;
+            this.nom.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nom.ForeColor = System.Drawing.Color.White;
+            this.nom.Location = new System.Drawing.Point(45, 99);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(137, 17);
+            this.nom.TabIndex = 63;
+            this.nom.Text = "nombre";
+            this.nom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tempsMin
+            // 
+            this.tempsMin.BackColor = System.Drawing.Color.Transparent;
+            this.tempsMin.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempsMin.ForeColor = System.Drawing.Color.White;
+            this.tempsMin.Location = new System.Drawing.Point(377, 99);
+            this.tempsMin.Name = "tempsMin";
+            this.tempsMin.Size = new System.Drawing.Size(33, 18);
+            this.tempsMin.TabIndex = 64;
+            this.tempsMin.Text = "0";
+            this.tempsMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tempsSec
+            // 
+            this.tempsSec.BackColor = System.Drawing.Color.Transparent;
+            this.tempsSec.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempsSec.ForeColor = System.Drawing.Color.White;
+            this.tempsSec.Location = new System.Drawing.Point(377, 113);
+            this.tempsSec.Name = "tempsSec";
+            this.tempsSec.Size = new System.Drawing.Size(33, 24);
+            this.tempsSec.TabIndex = 65;
+            this.tempsSec.Text = "0";
+            this.tempsSec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textMin
+            // 
+            this.textMin.BackColor = System.Drawing.Color.Transparent;
+            this.textMin.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textMin.ForeColor = System.Drawing.Color.White;
+            this.textMin.Location = new System.Drawing.Point(405, 99);
+            this.textMin.Name = "textMin";
+            this.textMin.Size = new System.Drawing.Size(80, 18);
+            this.textMin.TabIndex = 66;
+            this.textMin.Text = "minutes";
+            this.textMin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textSec
+            // 
+            this.textSec.BackColor = System.Drawing.Color.Transparent;
+            this.textSec.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSec.ForeColor = System.Drawing.Color.White;
+            this.textSec.Location = new System.Drawing.Point(405, 116);
+            this.textSec.Name = "textSec";
+            this.textSec.Size = new System.Drawing.Size(80, 18);
+            this.textSec.TabIndex = 67;
+            this.textSec.Text = "seconds";
+            this.textSec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tempsPartida
+            // 
+            this.tempsPartida.Tick += new System.EventHandler(this.tempsPartida_Tick);
             // 
             // Inicio
             // 
@@ -187,6 +258,11 @@ namespace WindowsFormsApplication1
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Inicio_Fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(524, 236);
+            this.Controls.Add(this.textSec);
+            this.Controls.Add(this.textMin);
+            this.Controls.Add(this.tempsSec);
+            this.Controls.Add(this.tempsMin);
+            this.Controls.Add(this.nom);
             this.Controls.Add(this.cerrar);
             this.Controls.Add(this.enviar);
             this.Controls.Add(this.contraLogin);
@@ -199,12 +275,14 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Login);
             this.Controls.Add(this.Register);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Inicio";
             this.Text = "Inicio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicio_FormClosing);
+            this.Load += new System.EventHandler(this.Inicio_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +302,11 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.TextBox contraLogin;
         private System.Windows.Forms.Button enviar;
         private System.Windows.Forms.Button cerrar;
+        private System.Windows.Forms.Label nom;
+        private System.Windows.Forms.Label tempsMin;
+        private System.Windows.Forms.Label tempsSec;
+        private System.Windows.Forms.Label textMin;
+        private System.Windows.Forms.Label textSec;
+        private System.Windows.Forms.Timer tempsPartida;
     }
 }

@@ -35,12 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.enviar = new System.Windows.Forms.Button();
             this.Petición_Marc = new System.Windows.Forms.RadioButton();
-            this.Petición_Alba = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.Petición_Eloi = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.fechaPartida = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.idUsuario = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.gridListaConectados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Desconectar = new System.Windows.Forms.Button();
@@ -49,6 +48,10 @@
             this.estadoInvitados = new System.Windows.Forms.DataGridView();
             this.tiempo = new System.Windows.Forms.Label();
             this.cuentaAtras = new System.Windows.Forms.Timer(this.components);
+            this.InvitarAmigos = new System.Windows.Forms.Button();
+            this.notificacionHome = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.eliminarUsuario = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridListaConectados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoInvitados)).BeginInit();
@@ -56,11 +59,13 @@
             // 
             // enviar
             // 
-            this.enviar.BackColor = System.Drawing.Color.LightGray;
+            this.enviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
+            this.enviar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.enviar.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enviar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.enviar.Location = new System.Drawing.Point(6, 260);
+            this.enviar.Location = new System.Drawing.Point(12, 259);
             this.enviar.Name = "enviar";
-            this.enviar.Size = new System.Drawing.Size(339, 23);
+            this.enviar.Size = new System.Drawing.Size(384, 23);
             this.enviar.TabIndex = 5;
             this.enviar.Text = "Enviar Petición";
             this.enviar.UseVisualStyleBackColor = false;
@@ -70,34 +75,22 @@
             // 
             this.Petición_Marc.AutoSize = true;
             this.Petición_Marc.ForeColor = System.Drawing.Color.LightGray;
-            this.Petición_Marc.Location = new System.Drawing.Point(12, 96);
+            this.Petición_Marc.Location = new System.Drawing.Point(12, 90);
             this.Petición_Marc.Name = "Petición_Marc";
             this.Petición_Marc.Size = new System.Drawing.Size(221, 18);
             this.Petición_Marc.TabIndex = 8;
             this.Petición_Marc.TabStop = true;
-            this.Petición_Marc.Text = "¿Número de Partidas jugadas?";
+            this.Petición_Marc.Text = "¿Cuántas partidas he jugado?";
             this.Petición_Marc.UseVisualStyleBackColor = true;
-            // 
-            // Petición_Alba
-            // 
-            this.Petición_Alba.AutoSize = true;
-            this.Petición_Alba.ForeColor = System.Drawing.Color.LightGray;
-            this.Petición_Alba.Location = new System.Drawing.Point(12, 122);
-            this.Petición_Alba.Name = "Petición_Alba";
-            this.Petición_Alba.Size = new System.Drawing.Size(326, 18);
-            this.Petición_Alba.TabIndex = 7;
-            this.Petición_Alba.TabStop = true;
-            this.Petición_Alba.Text = "¿Número de créditos después de una partida?";
-            this.Petición_Alba.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
-            this.label3.Location = new System.Drawing.Point(24, 46);
+            this.label3.Location = new System.Drawing.Point(25, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(77, 14);
             this.label3.TabIndex = 12;
             this.label3.Text = "Consultas:";
             // 
@@ -105,7 +98,7 @@
             // 
             this.Petición_Eloi.AutoSize = true;
             this.Petición_Eloi.ForeColor = System.Drawing.Color.LightGray;
-            this.Petición_Eloi.Location = new System.Drawing.Point(12, 147);
+            this.Petición_Eloi.Location = new System.Drawing.Point(12, 114);
             this.Petición_Eloi.Name = "Petición_Eloi";
             this.Petición_Eloi.Size = new System.Drawing.Size(193, 18);
             this.Petición_Eloi.TabIndex = 17;
@@ -116,41 +109,42 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(29)))), ((int)(((byte)(60)))));
-            this.groupBox1.Controls.Add(this.fechaPartida);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Petición_Eloi);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Petición_Alba);
             this.groupBox1.Controls.Add(this.Petición_Marc);
-            this.groupBox1.Controls.Add(this.enviar);
             this.groupBox1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 289);
+            this.groupBox1.Size = new System.Drawing.Size(384, 189);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Peticiones, Grupo 10";
             // 
-            // fechaPartida
+            // idUsuario
             // 
-            this.fechaPartida.BackColor = System.Drawing.Color.LightGray;
-            this.fechaPartida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fechaPartida.Location = new System.Drawing.Point(77, 207);
-            this.fechaPartida.Name = "fechaPartida";
-            this.fechaPartida.Size = new System.Drawing.Size(196, 20);
-            this.fechaPartida.TabIndex = 29;
+            this.idUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.idUsuario.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idUsuario.ForeColor = System.Drawing.Color.LightGray;
+            this.idUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.idUsuario.Location = new System.Drawing.Point(430, 32);
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.Size = new System.Drawing.Size(253, 19);
+            this.idUsuario.TabIndex = 31;
+            this.idUsuario.Text = "USER";
+            this.idUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(105, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 14);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Fecha de la partida:";
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
+            this.label5.Location = new System.Drawing.Point(430, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(253, 14);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "USER";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gridListaConectados
             // 
@@ -177,34 +171,36 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridListaConectados.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridListaConectados.GridColor = System.Drawing.Color.DarkRed;
-            this.gridListaConectados.Location = new System.Drawing.Point(369, 31);
+            this.gridListaConectados.Location = new System.Drawing.Point(433, 85);
             this.gridListaConectados.Name = "gridListaConectados";
             this.gridListaConectados.RowHeadersVisible = false;
             this.gridListaConectados.RowHeadersWidth = 51;
-            this.gridListaConectados.Size = new System.Drawing.Size(175, 95);
+            this.gridListaConectados.Size = new System.Drawing.Size(250, 158);
             this.gridListaConectados.TabIndex = 30;
-            this.gridListaConectados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridListaConectados_CellClick);
+            this.gridListaConectados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridListaConectados_CellContentClick_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
-            this.label1.Location = new System.Drawing.Point(384, 14);
+            this.label1.Location = new System.Drawing.Point(486, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 14);
+            this.label1.Size = new System.Drawing.Size(140, 14);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Usuarios Conectados:";
+            this.label1.Text = "Usuarios Conectados";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Desconectar
             // 
             this.Desconectar.BackColor = System.Drawing.Color.DarkRed;
+            this.Desconectar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Desconectar.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Desconectar.ForeColor = System.Drawing.Color.LightGray;
-            this.Desconectar.Location = new System.Drawing.Point(12, 307);
+            this.Desconectar.Location = new System.Drawing.Point(12, 480);
             this.Desconectar.Name = "Desconectar";
-            this.Desconectar.Size = new System.Drawing.Size(351, 22);
+            this.Desconectar.Size = new System.Drawing.Size(184, 23);
             this.Desconectar.TabIndex = 30;
             this.Desconectar.Text = "Desconectar / Cerrar";
             this.Desconectar.UseVisualStyleBackColor = false;
@@ -212,27 +208,29 @@
             // 
             // crearPartida
             // 
-            this.crearPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(29)))), ((int)(((byte)(60)))));
+            this.crearPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            this.crearPartida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.crearPartida.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crearPartida.ForeColor = System.Drawing.Color.LightGray;
-            this.crearPartida.Location = new System.Drawing.Point(369, 134);
+            this.crearPartida.ForeColor = System.Drawing.Color.Black;
+            this.crearPartida.Location = new System.Drawing.Point(433, 290);
             this.crearPartida.Name = "crearPartida";
-            this.crearPartida.Size = new System.Drawing.Size(175, 22);
+            this.crearPartida.Size = new System.Drawing.Size(250, 22);
             this.crearPartida.TabIndex = 31;
-            this.crearPartida.Text = "Iniciar Partida";
+            this.crearPartida.Text = "Invitar aleatorios";
             this.crearPartida.UseVisualStyleBackColor = false;
             this.crearPartida.Click += new System.EventHandler(this.crearPartida_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
-            this.label4.Location = new System.Drawing.Point(369, 184);
+            this.label4.Location = new System.Drawing.Point(474, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 14);
+            this.label4.Size = new System.Drawing.Size(168, 14);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Estado de los Invitados:";
+            this.label4.Text = "Estado de los Invitados";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // estadoInvitados
@@ -260,19 +258,19 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.estadoInvitados.DefaultCellStyle = dataGridViewCellStyle4;
             this.estadoInvitados.GridColor = System.Drawing.Color.DarkRed;
-            this.estadoInvitados.Location = new System.Drawing.Point(369, 206);
+            this.estadoInvitados.Location = new System.Drawing.Point(433, 376);
             this.estadoInvitados.Name = "estadoInvitados";
             this.estadoInvitados.RowHeadersVisible = false;
             this.estadoInvitados.RowHeadersWidth = 51;
-            this.estadoInvitados.Size = new System.Drawing.Size(175, 123);
+            this.estadoInvitados.Size = new System.Drawing.Size(250, 127);
             this.estadoInvitados.TabIndex = 33;
             // 
             // tiempo
             // 
             this.tiempo.BackColor = System.Drawing.Color.Transparent;
-            this.tiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tiempo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tiempo.ForeColor = System.Drawing.Color.LightGray;
-            this.tiempo.Location = new System.Drawing.Point(418, 159);
+            this.tiempo.Location = new System.Drawing.Point(520, 325);
             this.tiempo.Name = "tiempo";
             this.tiempo.Size = new System.Drawing.Size(79, 23);
             this.tiempo.TabIndex = 35;
@@ -283,20 +281,79 @@
             // 
             this.cuentaAtras.Tick += new System.EventHandler(this.cuentaAtras_Tick);
             // 
+            // InvitarAmigos
+            // 
+            this.InvitarAmigos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            this.InvitarAmigos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.InvitarAmigos.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvitarAmigos.ForeColor = System.Drawing.Color.Black;
+            this.InvitarAmigos.Location = new System.Drawing.Point(433, 262);
+            this.InvitarAmigos.Name = "InvitarAmigos";
+            this.InvitarAmigos.Size = new System.Drawing.Size(250, 22);
+            this.InvitarAmigos.TabIndex = 36;
+            this.InvitarAmigos.Text = "Invitar amigos";
+            this.InvitarAmigos.UseVisualStyleBackColor = false;
+            this.InvitarAmigos.Click += new System.EventHandler(this.InvitarAmigos_Click);
+            // 
+            // notificacionHome
+            // 
+            this.notificacionHome.BackColor = System.Drawing.Color.Black;
+            this.notificacionHome.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notificacionHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
+            this.notificacionHome.Location = new System.Drawing.Point(14, 312);
+            this.notificacionHome.Name = "notificacionHome";
+            this.notificacionHome.Size = new System.Drawing.Size(382, 157);
+            this.notificacionHome.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(210)))), ((int)(((byte)(5)))));
+            this.label8.Location = new System.Drawing.Point(120, 298);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(175, 14);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Resultado de la Petición";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // eliminarUsuario
+            // 
+            this.eliminarUsuario.BackColor = System.Drawing.Color.Red;
+            this.eliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.eliminarUsuario.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eliminarUsuario.ForeColor = System.Drawing.Color.Black;
+            this.eliminarUsuario.Location = new System.Drawing.Point(202, 480);
+            this.eliminarUsuario.Name = "eliminarUsuario";
+            this.eliminarUsuario.Size = new System.Drawing.Size(194, 23);
+            this.eliminarUsuario.TabIndex = 39;
+            this.eliminarUsuario.Text = "Eliminar Usuario y Salir";
+            this.eliminarUsuario.UseVisualStyleBackColor = false;
+            this.eliminarUsuario.Click += new System.EventHandler(this.eliminarUsuario_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(554, 341);
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Home_V1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(695, 515);
+            this.Controls.Add(this.eliminarUsuario);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.notificacionHome);
+            this.Controls.Add(this.InvitarAmigos);
             this.Controls.Add(this.tiempo);
             this.Controls.Add(this.estadoInvitados);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.crearPartida);
+            this.Controls.Add(this.idUsuario);
             this.Controls.Add(this.Desconectar);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridListaConectados);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.enviar);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -317,12 +374,9 @@
         #endregion
         private System.Windows.Forms.Button enviar;
         private System.Windows.Forms.RadioButton Petición_Marc;
-        private System.Windows.Forms.RadioButton Petición_Alba;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton Petición_Eloi;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox fechaPartida;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView gridListaConectados;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Desconectar;
@@ -331,6 +385,12 @@
         private System.Windows.Forms.DataGridView estadoInvitados;
         private System.Windows.Forms.Label tiempo;
         private System.Windows.Forms.Timer cuentaAtras;
+        private System.Windows.Forms.Label idUsuario;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button InvitarAmigos;
+        private System.Windows.Forms.Label notificacionHome;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button eliminarUsuario;
     }
 }
 
